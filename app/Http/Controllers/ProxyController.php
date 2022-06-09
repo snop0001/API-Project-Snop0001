@@ -1,8 +1,10 @@
 <?php
+
+namespace App\Http\Controllers;
 /**
  * Class to handle an AJAX call as a proxy
  */
-class Proxy
+class ProxyController
 {
     private $url;
 
@@ -20,7 +22,7 @@ class Proxy
         curl_setopt($curl, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
         ]);
-        
+
         //API call with Authorization
         //Change the key with your settings
         // curl_setopt($curl, CURLOPT_HTTPHEADER, [

@@ -17,11 +17,21 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('admin',function() {
     return view('layouts.app');
 });
 
 Auth::routes();
 URL::forceScheme('https');
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/index', function () {
+    return view('index');
+});
+
+//route for the api controller
+Route::get('/api', [App\Http\Controllers\ApiController::class, 'getInfo'])->name('getInfo');
