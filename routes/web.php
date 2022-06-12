@@ -22,16 +22,22 @@ Route::get('admin',function() {
 });
 
 Auth::routes();
-URL::forceScheme('https');
 
+//route for the api controller - get info function
+Route::get('/api/{id}', [App\Http\Controllers\ApiController::class, 'getInfo'])->name('getInfo');
+
+//route for the api controller - search letter function
+Route::get('/api/search/{letter}', [App\Http\Controllers\ApiController::class, 'search'])->name('search');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/index', function () {
-    return view('index');
+Route::get('/showDrink/{id}', function () {
+    return view('showDrink');
 });
 
-//route for the api controller
-Route::get('/api', [App\Http\Controllers\ApiController::class, 'getInfo'])->name('getInfo');
+Route::get('/search/{letter}', function () {
+    return view('search');
+});
+

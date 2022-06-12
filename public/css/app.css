@@ -43155,3 +43155,91 @@ a.text-muted:hover {
     background: #4e114e linear-gradient(180deg, #42073e, #1e0321) repeat-x !important;
     color: #fff;
 }
+
+.imgMain1 {
+    width:300px;
+    height:auto;
+    border:10px #ad2cab solid;
+}
+ /*grid for row 1 main page drinks*/
+.grid-row1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "drink0 drink1";
+    grid-gap: 5px;
+}
+
+#drink0 {
+    grid-area: drink0;
+}
+
+#drink1 {
+    grid-area: drink1;
+}
+
+.grid-inner1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "colImg colInfo";
+    grid-gap: 5px;
+}
+
+#colImg {
+    grid-area: colImg;
+}
+
+#colInfo {
+    grid-area: colInfo;
+}
+
+/*grid for row 2 main page drinks*/
+.grid-row2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "drink2 drink3";
+    grid-gap: 5px;
+}
+
+#drink2 {
+    grid-area: drink2;
+}
+
+#drink3 {
+    grid-area: drink3;
+}
+
+.grid-inner2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "colInfo colImg";
+    grid-gap: 5px;
+}
+
+#colImg {
+    grid-area: colImg;
+}
+
+#colInfo {
+    grid-area: colInfo;
+}
+
+.bg-cardDrink {
+    background-color: #f1dbf1;
+}
+
+.CharacterContainer {
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 3em;
+    background-color: #f1d6f1;
+    color: #93126b;
+    cursor: pointer;
+}
+
+.letter {
+    color: #5c0a59;
+}

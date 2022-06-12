@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ config('app.name') }}</title>
+    @yield('head')
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -65,7 +66,7 @@
 
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper bg-color">
-        <div class="content-header bg-black">
+        <div class="content-header ">
             @yield('header')
         </div>
         <section class="content">
@@ -74,13 +75,6 @@
     </div>
 
     <!-- Main Footer -->
-    <footer class="main-footer">
-        <div class="float-right d-none d-sm-block">
-            <b>Version</b> 3.0.5
-        </div>
-        <strong>Copyright &copy; 2014-2022 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
-        reserved.
-    </footer>
 </div>
 
 <script src="{{ mix('js/app.js') }}" defer></script>
