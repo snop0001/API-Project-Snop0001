@@ -50,7 +50,7 @@ async function prepareArray(amount) {
             j++
         }
     }
-    // call next funcition to present data according to the generated array
+    // call next function to present data according to the generated array
     selectData(array);
 }
 

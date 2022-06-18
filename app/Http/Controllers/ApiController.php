@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-//include("./ProxyController.php");
-
 class ApiController extends Controller
 {
     /**
@@ -23,6 +21,11 @@ class ApiController extends Controller
         print_r($result);
     }
 
+    /**
+     * This function finds all the cocktails according to the letter their name start with
+     * @param $letter
+     * @return void
+     */
     public function search($letter)
     {
         //setup the ProxyController with the right credentials

@@ -6,74 +6,8 @@ function init() {
     selectData(letter);
 }
 
-// /**
-//  * Generates a random integer number between min and max
-//  *
-//  * @param min - minimal time
-//  * @param max - maximal time
-//  * @returns a random integer number between min and max
-//  */
-// function randomInteger(min, max) {
-//     return Math.round(Math.random() * (max - min) + min);
-// }
-//
-// /**
-//  * This function creates the array of Ids for the home page
-//  * It will check that all 4 drinks genereated are different
-//  * and that each id will ot return null from the API
-//  * @param amount
-//  * @returns {Promise<void>}
-//  */
-// async function prepareArray(amount) {
-//     let array = [];
-//     let id = 0;
-//     for (let counter = 0; counter < amount; counter++) {
-//         id = randomInteger(11000, 11100);
-//         let checkDosentExist = false;
-//         let isDrinkNull = true;
-//         let j = 0
-//         while ((!checkDosentExist) && j < 100) {
-//             if (array.indexOf(id) === -1) {
-//                 checkDosentExist = true;
-//                 // await here so first the json request will be executed before continuing
-//                 isDrinkNull = await check(id);
-//                 //only if not null add to array
-//                 if (isDrinkNull === false) {
-//                     array[counter] = id;
-//                 }
-//             }
-//             // if any checks fails restart
-//             if (!checkDosentExist || isDrinkNull === true) {
-//                 id = randomInteger(11000, 11100);
-//                 checkDosentExist = false;
-//                 isDrinkNull = true
-//             }
-//             j++
-//         }
-//     }
-//     // call next funcition to present data according to the generated array
-//     selectData(array);
-// }
-//
-// /**
-//  * This function checks if the id of the drink is null and will return true or false
-//  * @param id
-//  * @returns {Promise<boolean>}
-//  */
-// async function check(id) {
-//     try {
-//         let response = await fetch("/api/" + id);
-//         let drink = await response.json();
-//         return drink.drinks === null;
-//
-//     }  catch (err) {
-//         console.error("Error: ", err);
-//     }
-// }
-
-
 /**
- * This fucntion goes through every drink in the array
+ * This function send a request to get the data of all the drinks in the letter submited
  * will generate json response for that drink
  * and will call the function to show its data to the DOM
  * @param letter

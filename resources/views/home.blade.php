@@ -121,7 +121,7 @@
         </div>
     </div>
     <div>
-        <a href="/search/a" class="btn btn-info btn-lg float-right">Search for cocktails alphabetically</a>
+        <a href="/search/A" class="btn btn-info btn-lg float-right">Search for cocktails alphabetically</a>
     </div>
 
         <script src="./js/app-api.js"></script>

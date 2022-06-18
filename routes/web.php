@@ -29,14 +29,15 @@ Route::get('/api/{id}', [App\Http\Controllers\ApiController::class, 'getInfo'])-
 //route for the api controller - search letter function
 Route::get('/api/search/{letter}', [App\Http\Controllers\ApiController::class, 'search'])->name('search');
 
-
+// home page
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+// show page for a drink
 Route::get('/showDrink/{id}', function () {
     return view('showDrink');
 });
 
+//search page by letter get al the drinks in that letter
 Route::get('/search/{letter}', function () {
     return view('search');
 });
